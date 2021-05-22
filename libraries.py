@@ -23,6 +23,3 @@ from keras.layers import Dense, Dropout
 from keras.wrappers.scikit_learn import KerasClassifier
 from keras.utils import np_utils
 
-# working with:
-# - lists with special operators and functors
-# -- Dirac delta (1d, 3d), dot, cross, (gradient, div, curl), line integral, base-change, tensors
