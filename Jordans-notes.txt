@@ -1,11 +1,28 @@
-Working with:
- - lists with special operators and functors
- -- Dirac delta (1d, 3d), dot, cross, (gradient, div, curl), line integral, base-change, tensors
+==================================================
+Electrodynamics Griffiths 4th ed
+==================================================
 
-```
-Discussion points
+The easiest way to digest the contents of undergraduate electrodynamics
+teaching is via tensors on complex numbers.
 
-- Topological definition of continuity is kind of different than the physical one. I think on the discrete topology all elements are continuous. Weird how that got out of hand.
+There are a few levels to think about such tensors
+- as defined in the book (physical)
+- via the common category definition (common in algebra)
+- as a model (the fullest definition that allows automated reasoning)
+
+--------------------------------------------------
+ch 1
+--------------------------------------------------
+
+Math objects mentioned so far are basically:
+- lists with special operators and functors
+-- Dirac delta as an incompatible cheat function (1d, 3d), 
+-- dot, cross, (gradient, div, curl), 
+-- line integral, base-change, tensors
+
+
+Discussion points:
+- Topological definition of continuity is kind of different than the physical one. I think on the discrete topology all elements are continuous.
 
 - What is the idea behind electric charge? Was it part of the field theory that Maxwell was thinking of? What was the experiment used to demonstrate it? What other properties does it predict? I am guessing push and pull of magnets led to the idea.
 
@@ -23,11 +40,8 @@ Discussion points
 
 - A . (B x C) is the volume of a parallelpiped. BAC-CAB rule exists. Lots of computational shorthand. It kind of reminds me of old statistics books before computers were invented. I can see it being a nice shorthand for being a chalkboard-bounded physicist. But it seems like a bit much to mentally maintain as a computational physicist, right?
 
-- lol 1.31 is ugly. But the notation is nice and concise for describing 3d rotation. Quartenions could also work here I think.
+- lol 1.31 is verbose. But the notation is nice and concise for describing 3d rotation. Quartenions could also work here I think.
   b = Ax would have been much less tedious too. In computing I would have just wrote out a function definition for this special case though. And in higher level math that is also what you would do,
-```
-
-```
 - Differential geometry is a weird subject. It takes many of these unusual operators and runs with it. I think this is due to how interesting these operators are geometrically. How did your general relativity class merge math and physics versions of these objects?
 
 - Why does the gradient point towards greatest descent? Looks like component derivatives. So it is going for the taxi metric sum of velocity.
@@ -41,10 +55,16 @@ Discussion points
 - Ooo page 23 has the Laplacian. Remember that from complex analysis?
 
 - 1.44 I guess gradients have an important property to them. (curl of a gradient of T == 0). I need proof for this identity.
-```
+
 
 I am really curious how this stuff works in complex analysis, and a little in differential geometry. DG is kind of a foil for physics, so it is probably going to look a lot like its physical counterpart. But CA could give some weird extra information about what is being said in this book. Possible computational speedups because it is so polynomial-based.
 
 My attention span started to peter out at line integrals. But ch 1.5 and 1.6 look interesting and new to me. ^_^
 
 I have a feeling only a fraction of the math used in the intro is actually needed to work with EM. And the math is a bit dated.
+
+--------------------------------------------------
+ch 2
+--------------------------------------------------
+
+
