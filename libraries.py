@@ -11,6 +11,7 @@ from sympy.abc import * # skip declaring symbols, eats up namespace though
 #!pip install magpylib
 
 # SMT solver 
+#!pip install z3-solver
 import z3
 
 # packaged EM 

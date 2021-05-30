@@ -11,7 +11,7 @@ f = sp.integrate(x ** 2 + x + 1, x)
 # solving
 from sympy.solvers import solve 
 sp.solve = solve
-import z3
+from z3 import *
 
 # solve assumes arg1 = 0
 ## This solver is also naked of units
@@ -20,11 +20,10 @@ sp.solve(x**2 - 1, x)
 sp.solve(x - y, x) 
 
 # z3 has bounds control, and types
-x = z3.Int('x')
-y = z3.Int('y')
-z3.solve(x > 2, y < 10, x + 2*y == 7)
+x = Int('x')
+y = Int('y')
+solve(x > 2, y < 10, x + 2*y == 7)
 
-from z3 import *
 # internal representation of reals is precise
 # these are not amateur floats, actual reals
 x = Real('x')
@@ -58,6 +57,14 @@ s.pop()
 print(s)
 print("Solving restored set of constraints...")
 print(s.check())
+
+# functions on objects also works
+S = DeclareSort('S')
+f = Function('f', S, S)
+x = Const('x', S)
+print('function stuff')
+print(solve(f(f(x)) == x, f(f(f(x))) == x))
+print(solve(f(f(x)) == x, f(f(f(x))) == x, f(x) != x))
 
 # line integrals, numerical
 #import autograd.numpy as np
