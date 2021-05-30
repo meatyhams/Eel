@@ -8,6 +8,14 @@ from sympy.abc import *
 x = sp.Symbol('x')
 f = sp.integrate(x ** 2 + x + 1, x)
 
+# solving
+from sympy.solvers import solve
+import z3
+
+# solve assumes arg1 = 0:w
+solve(x**2 - 1, x) 
+solve(x - y, x) # assumes x - y = 0
+
 # line integrals, numerical
 import autograd.numpy as np
 from autograd import jacobian
